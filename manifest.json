@@ -1,9 +1,8 @@
 {
-  "name": "Stylus",
-  "version": "1.5.30",
+  "name": "Mini Stylus",
+  "version": "0.0.1",
   "minimum_chrome_version": "55",
   "description": "__MSG_description__",
-  "homepage_url": "https://add0n.com/stylus.html",
   "manifest_version": 2,
   "icons": {
     "16": "images/icon/16.png",
@@ -57,13 +56,13 @@
   "commands": {
     "_execute_browser_action": {},
     "openManage": {
-    "description": "__MSG_openManage__"
+      "description": "__MSG_openManage__"
     },
     "reload": {
       "description": "__MSG_reload__"
     },
     "styleDisableAll": {
-    "description": "__MSG_disableAllStyles__"
+      "description": "__MSG_disableAllStyles__"
     }
   },
   "content_scripts": [
@@ -79,11 +78,6 @@
         "content/style-injector.js",
         "content/apply.js"
       ]
-    },
-    {
-      "matches": ["http://userstyles.org/*", "https://userstyles.org/*"],
-      "run_at": "document_start",
-      "js": ["content/install-hook-userstyles.js"]
     }
   ],
   "browser_action": {
@@ -93,7 +87,7 @@
       "19": "images/icon/19w.png",
       "38": "images/icon/38w.png"
     },
-    "default_title": "Stylus",
+    "default_title": "Mini Stylus",
     "default_popup": "popup.html"
   },
   "default_locale": "en",
