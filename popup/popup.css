@@ -602,7 +602,7 @@ a:hover .svg-icon {
 #popup-options > *,
 #popup-options .split-btn > :first-child {
   /* several languages have labels of wildly different lengths so we try to maintain the proportion */
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   min-width: 2em;
 }
 #options-btn svg {
