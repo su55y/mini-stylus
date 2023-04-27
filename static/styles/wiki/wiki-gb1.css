@@ -1,0 +1,181 @@
+:root {
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --fgd: #d5c4a1;
+  --fgw: #f2e5bc;
+  --bg1: #3c3836;
+  --bg2: #504945;
+  --bg3: #665c54;
+  --blue: #458588;
+  --blue2: #83a598;
+  --red: #fb4934;
+}
+
+/* coords in title */
+.mw-body .mw-indicators,
+.mw-editsection-divider,
+.mw-editsection-bracket,
+.mw-editsection-visualeditor,
+.mw-editsection,
+table#disambig {
+  display: none;
+}
+
+/* cut off all of the trash */
+div#mw-panel,
+div#mw-head-base,
+div#mw-head,
+div#mw-page-base,
+footer#footer,
+div#mw-data-after-content {
+  height: 0 !important;
+  width: 0 !important;
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* document, may be useless */
+body {
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* highest priority for content, and only */
+div.mw-body#content {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  width: 100vw !important;
+  margin: 0 auto !important;
+  font-size: 14pt;
+  box-sizing: border-box;
+  border-color: var(--bg) !important;
+}
+
+* {
+  background: var(--bg) !important;
+  border-color: var(--fgd) !important;
+  color: var(--fg) !important;
+}
+
+h1,
+h2,
+.thumbimage {
+  border-color: var(--fgd) !important;
+}
+
+hr,
+td.nomobile.plainlist > hr {
+  background-color: var(--fgd) !important;
+}
+
+#p-logo a {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+a {
+  color: var(--blue2) !important;
+}
+
+a:visited {
+  color: var(--blue) !important;
+}
+
+a:link {
+  color: var(--blue2) !important;
+  font-weight: bold !important;
+}
+
+a:hover,
+a:hover span {
+  color: var(--blue) !important;
+  text-decoration: underline !important;
+}
+
+#content,
+#content * {
+  background: var(--bg) !important;
+  border-color: var(--fgd) !important;
+}
+
+#content {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#toc,
+#toc * {
+  background: var(--bg) !important;
+  border-color: var(--fgd) !important;
+}
+
+#toc {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#p-cactions li.selected a,
+#p-cactions li a,
+#p-cactions li a:hover {
+  padding: 0 1em 0.1em !important;
+}
+
+#bodyContent pre {
+  background: var(--bg) !important;
+}
+
+/* white gradient fix in popups */
+.mwe-popups .mwe-popups-extract[dir='ltr']:after {
+  background-image: unset !important;
+}
+
+*::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 1.2rem;
+  max-width: 10px !important;
+  background: white;
+}
+
+*::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--fgd);
+}
+
+*::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: var(--bg3);
+  border: 1px solid var(--bg3);
+  min-height: 100px;
+}
+
+/************** IMAGES **************/
+
+img[src*="http://upload.wikimedia.org/wikipedia/meta/2/2a/Nohat-logo-nowords-bgwhite-200px.jpg"],
+img[src*="http://upload.wikimedia.org/wikipedia/commons/6/62/174px-Wikipedia-word1_7.png"],
+#p-logo a {
+  display: none !important;
+}
+
+/** BLANKED OUT IMAGES **/
+
+img[src*='/images/poweredby_mediawiki_88x31.png'],
+img[src*='/images/wikimedia-button.png'],
+img[src*='/Bookshelf-40x201_6.png'] {
+  width: 0px !important;
+  background: none !important;
+}
+
+.portlet li {
+  list-style-image: none !important;
+}
+
+ul {
+  list-style-image: none !important;
+}

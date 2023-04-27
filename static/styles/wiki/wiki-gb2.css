@@ -1,0 +1,316 @@
+:root {
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --fgd: #d5c4a1;
+  --fgw: #f2e5bc;
+  --bg1: #3c3836;
+  --bg2: #504945;
+  --bg3: #665c54;
+  --blue: #458588;
+  --blue2: #83a598;
+  --red: #fb4934;
+}
+
+/* gruvbox colorscheme */
+*,
+#content,
+.infobox,
+#toc,
+.thumbinner,
+.navbox,
+.navbox-title,
+.ambox,
+.mw-normal-catlinks,
+.catlinks,
+.main-box,
+.navbox-list,
+.navbox-even,
+.plainlinks,
+.plainlist,
+.navbox-group,
+.mwe-popups,
+a.mwe-popups-extract,
+.mwe-popups-container,
+.mw-mmv-post-image,
+.mw-mmv-image-metadata {
+  background: var(--bg) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--bg) !important;
+  color: var(--fg) !important;
+}
+
+.extiw,
+.wikidata-snak,
+.wikidata-main-snak,
+.wikidata-claim,
+.infobox-header,
+.infobox-above,
+.thumb,
+.infobox-below {
+  background-color: var(--bg2) !important;
+  border-color: var(--bg2) !important;
+}
+
+div.category,
+.infobox-subheader {
+  background-color: var(--bg3) !important;
+  border-color: var(--bg3) !important;
+  color: var(--fgd) !important;
+}
+
+/* white gradient fix in popups */
+.mwe-popups .mwe-popups-extract[dir='ltr']:after {
+  background-image: unset !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+caption {
+  color: var(--fg) !important;
+}
+
+li::marker {
+  color: var(--fg);
+  content: '* ';
+}
+
+h1,
+h2,
+.thumbimage {
+  border-color: var(--fgd) !important;
+}
+
+hr,
+td.nomobile.plainlist > hr {
+  background-color: var(--fgd) !important;
+}
+
+.toctext,
+.tocnumber {
+  color: var(--blue2) !important;
+}
+
+a,
+.toctogglelabel {
+  color: var(--blue2) !important;
+}
+
+.extiw > span {
+  color: var(--blue2) !important;
+  background-color: var(--bg) !important;
+}
+
+a.new {
+  color: var(--red) !important;
+}
+
+span.wikidata-snak,
+.wikidata-main-snak > a.image,
+span.wikidata-claim,
+div.pr,
+.pl > div,
+.ts-ПозКарта-метка-ссылка {
+  background: transparent !important;
+  color: var(--bg) !important;
+}
+
+#firstHeading,
+.thumbborder {
+  background-color: var(--bg3);
+  border-color: var(--bg3);
+  color: var(--fgw) !important;
+}
+
+.standard > * > tr > th {
+  background-color: var(--bg) !important;
+}
+
+.hlist {
+  background-color: var(--bg2) !important;
+}
+
+table.standard > * > tr > th,
+table.collapsible > * > tr > th,
+table.collapsed > * > tr > th {
+  border-color: var(--fgd) !important;
+}
+
+/* ******************************************* */
+
+/* document, may be useless */
+body {
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  scrollbar-color: var(--bg3) var(--bg);
+}
+
+body::-webkit-scrollbar {
+  width: 1.2vw;
+  max-width: 10px !important;
+  background: white;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--fgd);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--bg3);
+  border: 3px solid var(--bg3);
+  min-height: 100px;
+}
+
+/* page title */
+h1#firstHeading.firstHeading.mw-first-heading {
+  text-align: center;
+}
+
+/* content fix */
+h1.firstHeading:before {
+  content: unset !important;
+}
+
+/* cut off all of the trash */
+div#mw-panel,
+div#mw-head-base,
+div#mw-head,
+div#mw-page-base,
+footer#footer,
+div#mw-data-after-content {
+  height: 0 !important;
+  width: 0 !important;
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* highest priority for content, and only */
+div.mw-body#content {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  padding: 0 1vw;
+  width: 97.9vw !important;
+  margin: 0 auto !important;
+  font-size: 14pt;
+}
+
+/* wide short info box */
+table.infobox {
+  width: 96vw !important;
+}
+
+/* table fit width */
+table.wikitable {
+  width: 90vw !important;
+}
+
+/* smash table cells */
+.wikitable > tr > th,
+.wikitable > tr > td,
+.wikitable > * > tr > th,
+.wikitable > * > tr > td {
+  border: 1px solid white !important;
+  padding: 0em 0em !important;
+}
+
+/* coords in title */
+.mw-body .mw-indicators,
+.mw-editsection-divider,
+.mw-editsection-bracket,
+.mw-editsection-visualeditor,
+.mw-editsection,
+table#disambig {
+  display: none;
+}
+
+tr {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.infobox tr {
+  display: table-row;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+table.standard tbody tr,
+table.nowraplinks tr,
+table.wikitable tr,
+.standard > thead > tr,
+.standard > * > thead > tr {
+  display: table-row !important;
+}
+
+.standard > thead {
+  display: table-header-group !important;
+}
+
+table.standard,
+table.wide,
+table.wikitable {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid;
+  border-collapse: collapse;
+  background-color: var(--bg3) !important;
+  border-color: var(--bg3) !important;
+  color: var(--fgw) !important;
+}
+
+.wikitable > * > tr > th,
+.standard > * > tr > th {
+  background-color: var(--bg3) !important;
+  color: var(--fgw) !important;
+  padding: 0.4em 0.6em 0.4em 0.6em !important;
+}
+
+.standard > tr > th,
+.standard > tr > td,
+.standard > * > tr > th,
+.standard > * > tr > td,
+.wide > tr > th,
+.wide > tr > td,
+.wide > * > tr > th,
+.wide > * > tr > td,
+.wikitable > tr > th,
+.wikitable > tr > td,
+.wikitable > * > tr > th,
+.wikitable > * > tr > td,
+.wikitable > tr > th,
+.wikitable > tr > td,
+.wikitable > * > tr > td {
+  border: 1px solid !important;
+  padding: 0.125em 0.8em !important;
+  display: table-cell !important;
+  vertical-align: inherit !important;
+}
+
+.sortable > * > tr > th,
+.standard > * > tr > th {
+  display: table-cell !important;
+}
+
+.mw-parser-output .ib-settlement td,
+.mw-parser-output .ib-settlement th {
+  border: unset !important;
+  padding: 0.4em 0.6em 0.4em 0.6em;
+}

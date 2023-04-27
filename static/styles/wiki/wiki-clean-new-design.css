@@ -1,0 +1,73 @@
+@-moz-document domain("en.wikipedia.org") {
+  table.box-Multiple_issues,
+  div.vector-page-toolbar,
+  li#footer-info-copyright,
+  li#footer-places,
+  ul#footer-places,
+  ul#footer-icons,
+  div.vector-sitenotice-container,
+  nav.vector-user-links,
+  div.vector-header-start > a.mw-logo,
+  input.vector-search-box-input {
+    display: none !important;
+  }
+
+  /* header */
+  header.mw-header {
+    display: block !important;
+    grid-area: unset !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    min-height: 0 !important;
+  }
+  /* dropdown menu */
+  div.vector-header-start {
+    display: block;
+    position: fixed;
+    right: 1rem;
+  }
+  div.vector-menu-dropdown > div.vector-menu-content {
+    left: unset;
+    right: 1px;
+  }
+  /* seach button */
+  input#searchButton {
+    background-color: #dddd;
+    position: fixed;
+    top: unset;
+    right: 1rem;
+    bottom: 1rem;
+    min-width: unset;
+    width: 50px;
+    height: 50px;
+    transition: all 100ms linear;
+  }
+  input#searchButton:hover {
+    background-color: #ddd;
+    opacity: 1;
+    background-size: 30px;
+  }
+  div.vector-header-end {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* main */
+  .vector-feature-page-tools-enabled .mw-body {
+    display: grid;
+    grid-template: min-content min-content min-content 1fr / minmax(0, 70em) min-content;
+    grid-template-areas: 'titlebar-cx .' 'titlebar columnEnd' 'toolbar columnEnd' 'content columnEnd';
+  }
+  div#bodyContent {
+    font-size: 1em;
+  }
+
+  /* footer */
+  div.mw-footer-container {
+    padding-bottom: 0;
+  }
+  footer#footer {
+    padding: 0;
+  }
+}

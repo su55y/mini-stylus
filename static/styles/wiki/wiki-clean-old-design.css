@@ -1,0 +1,45 @@
+@-moz-document regexp(".+uk.wikipedia.org/wiki/(?!(%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0|%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0.+)).*") {
+  .nopring,
+  div#mw-page-base,
+  div#mw-head-base,
+  footer#footer,
+  div#mw-panel,
+  #p-personal,
+  #left-navigation,
+  #right-navigation > nav,
+  .mw-editsection,
+  div#siteSub {
+    display: none !important;
+  }
+
+  /* search button section */
+  #p-search,
+  #mw-head {
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+  }
+  #p-search > div > form > div > input {
+    display: none;
+  }
+  input#searchButton {
+    position: fixed;
+    display: block !important;
+    top: unset;
+    bottom: 1rem !important;
+    right: 1rem;
+    height: 2rem;
+    width: 2rem;
+    transition: all 100ms linear;
+  }
+  input#searchButton:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  /* content section */
+  div#content {
+    margin: 0 !important;
+    border: unset !important;
+    font-size: 1.2rem;
+  }
+}
