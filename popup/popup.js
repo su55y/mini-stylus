@@ -94,35 +94,6 @@ async function initPopup(frames) {
   prefs.subscribe('popupWidth', setPopupWidth, { runNow: true })
   setupLivePrefs()
 
-  /*
-  const elFind = $('#find-styles-btn')
-  const elFindDeps = async () => {
-    if (!t.template.searchUI) {
-      document.body.append(
-        await t.fetchTemplate('/popup/search.html', 'searchUI')
-      )
-    }
-    await require(['/popup/search.css', '/popup/search'])
-  }
-  elFind.on('click', async () => {
-    alert('to delete')
-    return
-    elFind.disabled = true
-    await elFindDeps()
-    Events.searchInline()
-  })
-  elFind.on('split-btn', async (e) => {
-    await elFindDeps()
-    Events.searchSite(e)
-  })
-  window.on('keydown', (e) => {
-    if (getEventKeyName(e) === 'Ctrl-F') {
-      e.preventDefault()
-      elFind.click()
-    }
-  })
-  */
-
   Object.assign($('#popup-manage-button'), {
     onclick: Events.openManager,
     oncontextmenu: Events.openManager,

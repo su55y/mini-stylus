@@ -43,7 +43,6 @@
       "background/sync-manager.js",
       "background/tab-manager.js",
       "background/token-manager.js",
-      "background/update-manager.js",
       "background/usercss-install-helper.js",
       "background/usercss-manager.js",
       "background/uso-api.js",
